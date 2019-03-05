@@ -26,7 +26,6 @@
     </div>
     <div id="startMenuWrapper">
         <div id="startMenu">
-            <p>Open Agar</p>
             <input type="text" tabindex="0" autofocus placeholder="Enter your name here" id="playerNameInput" maxlength="25" />
             <b class="input-error">Nick must be alphanumeric characters only!</b>
             <br />
@@ -35,12 +34,31 @@
             <button id="settingsButton">Settings</button>
             <script>
                 document.write([
+                    'alisa_safonova',
+                    'anya_kirilova',
+                    'innara_kuznecova',
+                    'ira_danilenko',
                     'ira_shramko',
-                    'julia_sidenko'
+                    'katya_fedorcova',
+                    'katya_troickaya',
+                    'lena_hrykina',
+                    'lera_buyanova',
+                    'marina_miranchuk',
+                    'mariya_dryannova',
+                    'nastya_korchkova',
+                    'nastya_piskunova',
+                    'olesya_malgina',
+                    'polina_zolotova',
+                    'sveta_vasilkova',
+                    'svetlana_ananeva',
+                    'tanya_gavrilova',
+                    'ulyana_bogdanova',
+                    'vika_kryuchkina',
+                    'yulya_sidenko',
                 ].map(id=>`
                     <button id='${id}' class='user-btn'>
-                        <img width="50" id='${id}_img' height="50" src='./img/${id}.svg' id='${id}' >
-                        ${id}
+                        <img width="100" id='${id}_img' height="100" src='./img/${id}.svg' id='${id}' >
+                        ${id.replace('_', ' ')}
                     </button>
                 `).join('')
                 )

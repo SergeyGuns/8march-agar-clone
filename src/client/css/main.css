@@ -115,6 +115,12 @@ div {
     border-top: 1px solid #DDD;
     outline: none;
 }
+.user-btn img {
+    float: left;
+}
+.user-btn {
+    width: 100px;
+}
 
 #startMenu {
     position: relative;
@@ -127,6 +133,8 @@ div {
     -webkit-border-radius: 5px;
     background-color: white;
     box-sizing: border-box;
+    background-image: url(../img/tresh2.gif);
+    background-size: 200px 300px;
 }
 
 #startMenu p {
