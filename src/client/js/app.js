@@ -7,6 +7,8 @@ var playerNameInput = document.getElementById("playerNameInput");
 var socket;
 var reason;
 
+var pdf = document.getElementById("pdf");
+
 var debug = function(args) {
     if (console && console.log) {
         console.log(args);
@@ -350,27 +352,34 @@ function drawCircle(centerX, centerY, radius, sides) {
 }
 
 function drawFood(food) {
-    graph.strokeStyle = "hsl(" + food.hue + ", 100%, 45%)";
-    graph.fillStyle = "hsl(" + food.hue + ", 100%, 50%)";
-    graph.lineWidth = foodConfig.border;
-    drawCircle(
+    // graph.strokeStyle = "hsl(" + food.hue + ", 100%, 45%)";
+    // graph.fillStyle = "hsl(" + food.hue + ", 100%, 50%)";
+    // graph.lineWidth = foodConfig.border;
+    // drawCircle(
+    //     food.x - player.x + global.screenWidth / 2,
+    //     food.y - player.y + global.screenHeight / 2,
+    //     food.radius,
+    //     global.foodSides
+    // );
+    graph.drawImage(
+        pdf,
         food.x - player.x + global.screenWidth / 2,
         food.y - player.y + global.screenHeight / 2,
-        food.radius,
-        global.foodSides
+        30,
+        40
     );
 }
 
 function drawVirus(virus) {
-    graph.strokeStyle = virus.stroke;
-    graph.fillStyle = virus.fill;
-    graph.lineWidth = virus.strokeWidth;
-    drawCircle(
-        virus.x - player.x + global.screenWidth / 2,
-        virus.y - player.y + global.screenHeight / 2,
-        virus.radius,
-        global.virusSides
-    );
+    // graph.strokeStyle = virus.stroke;
+    // graph.fillStyle = virus.fill;
+    // graph.lineWidth = virus.strokeWidth;
+    // drawCircle(
+    //     virus.x - player.x + global.screenWidth / 2,
+    //     virus.y - player.y + global.screenHeight / 2,
+    //     virus.radius,
+    //     global.virusSides
+    // );
 }
 
 function drawFireFood(mass) {
